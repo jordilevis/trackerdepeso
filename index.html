@@ -19,47 +19,43 @@
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-thumb { background: #334155; border-radius: 2px; }
 
-  /* Header */
   .header { text-align: center; margin-bottom: 24px; }
   .header .subtitle { font-size: 11px; color: #4f46e5; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 4px; }
   .header h1 { font-size: 26px; font-weight: 700; background: linear-gradient(90deg, #a5b4fc, #67e8f9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-  /* Tabs */
+  .sync-status { text-align: center; font-size: 11px; margin-bottom: 16px; padding: 6px 12px; border-radius: 20px; display: inline-block; }
+  .sync-ok { background: rgba(74,222,128,0.1); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); }
+  .sync-loading { background: rgba(250,204,21,0.1); color: #facc15; border: 1px solid rgba(250,204,21,0.2); }
+  .sync-error { background: rgba(248,113,113,0.1); color: #f87171; border: 1px solid rgba(248,113,113,0.2); }
+  .sync-wrap { text-align: center; margin-bottom: 12px; }
+
   .tabs { display: flex; justify-content: center; gap: 4px; margin-bottom: 20px; background: rgba(255,255,255,0.03); border-radius: 24px; padding: 4px; }
   .tab-btn { background: none; border: none; cursor: pointer; padding: 8px 14px; border-radius: 20px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; transition: all 0.2s; color: #94a3b8; }
   .tab-btn.active { background: rgba(99,102,241,0.3); color: #a5b4fc; }
   .tab-btn:hover:not(.active) { color: #cbd5e1; }
 
-  /* Cards */
   .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 20px; margin-bottom: 16px; }
   .card-indigo { background: rgba(99,102,241,0.08); border-color: rgba(99,102,241,0.2); }
   .card-cyan { background: rgba(34,211,238,0.05); border-color: rgba(34,211,238,0.15); }
   .card-green { background: rgba(74,222,128,0.04); border-color: rgba(74,222,128,0.15); }
 
-  /* Metrics grid */
   .metrics-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 16px; }
   .metric-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 14px; text-align: center; }
   .metric-val { font-family: 'Space Mono', monospace; font-size: 18px; font-weight: 700; }
   .metric-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin-top: 4px; }
 
-  /* Badge */
   .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
 
-  /* Progress bar */
   .progress-labels { display: flex; justify-content: space-between; font-size: 12px; color: #94a3b8; margin-bottom: 8px; }
   .progress-track { background: rgba(255,255,255,0.08); border-radius: 8px; height: 10px; overflow: hidden; }
   .progress-fill { height: 100%; background: linear-gradient(90deg, #6366f1, #22d3ee); border-radius: 8px; transition: width 0.5s; }
 
-  /* Chart */
-  .chart-label { font-size: 12px; color: #64748b; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+  .section-title { font-size: 12px; color: #64748b; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
 
-  /* History rows */
   .history-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 13px; }
   .history-date { color: #94a3b8; }
   .history-weight { font-family: 'Space Mono', monospace; }
-  .history-diff { font-size: 12px; }
 
-  /* Log form */
   label { font-size: 12px; color: #64748b; display: block; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase; }
   input[type=date], input[type=number] {
     width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
@@ -69,15 +65,14 @@
   input[type=number] { font-family: 'Space Mono', monospace; font-size: 20px; }
   .btn-primary { width: 100%; background: linear-gradient(90deg, #6366f1, #4f46e5); color: white; border: none; border-radius: 10px; padding: 12px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; cursor: pointer; transition: opacity 0.2s; }
   .btn-primary:hover { opacity: 0.9; }
+  .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
   .hint { margin-top: 14px; font-size: 12px; color: #475569; text-align: center; }
 
-  /* Meal cards */
   .meal-card { background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.15); border-radius: 12px; padding: 14px; margin-bottom: 10px; }
   .meal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
   .meal-name { font-weight: 600; font-size: 14px; }
   .meal-food { font-size: 13px; color: #94a3b8; padding-left: 8px; line-height: 1.8; }
 
-  /* Exercise cards */
   .ex-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 12px 16px; margin-bottom: 8px; display: flex; align-items: center; gap: 14px; }
   .ex-icon { font-size: 28px; width: 36px; text-align: center; }
   .ex-info { flex: 1; }
@@ -86,13 +81,11 @@
   .ex-detail { font-size: 13px; color: #94a3b8; }
   .ex-duration { font-size: 12px; color: #475569; white-space: nowrap; }
 
-  /* Section title */
-  .section-title { font-size: 12px; color: #64748b; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
-
   .tab-content { display: none; }
   .tab-content.active { display: block; }
-
   .footer { text-align: center; margin-top: 16px; font-size: 11px; color: #1e293b; }
+
+  .loading-overlay { text-align: center; padding: 40px; color: #64748b; font-size: 14px; }
 </style>
 </head>
 <body>
@@ -103,70 +96,20 @@
     <h1>Tracker de Peso</h1>
   </div>
 
+  <div class="sync-wrap">
+    <span class="sync-status sync-loading" id="sync-status">⏳ Conectando...</span>
+  </div>
+
   <div class="tabs">
-    <button class="tab-btn active" onclick="switchTab('dashboard')">📊 Progreso</button>
-    <button class="tab-btn" onclick="switchTab('log')">✏️ Registrar</button>
-    <button class="tab-btn" onclick="switchTab('food')">🥗 Dieta</button>
-    <button class="tab-btn" onclick="switchTab('exercise')">🏋️ Ejercicio</button>
+    <button class="tab-btn active" onclick="switchTab('dashboard', event)">📊 Progreso</button>
+    <button class="tab-btn" onclick="switchTab('log', event)">✏️ Registrar</button>
+    <button class="tab-btn" onclick="switchTab('food', event)">🥗 Dieta</button>
+    <button class="tab-btn" onclick="switchTab('exercise', event)">🏋️ Ejercicio</button>
   </div>
 
   <!-- DASHBOARD -->
   <div id="tab-dashboard" class="tab-content active">
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <div class="metric-val" id="m-current" style="color:#a5b4fc">—</div>
-        <div class="metric-label">Peso actual</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-val" id="m-lost" style="color:#4ade80">—</div>
-        <div class="metric-label">Perdido</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-val" id="m-togo" style="color:#facc15">—</div>
-        <div class="metric-label">Para meta</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="progress-labels">
-        <span>Inicio: 94,1 kg</span>
-        <span style="color:#a5b4fc;font-weight:600" id="m-pct">0%</span>
-        <span>Meta: 85 kg</span>
-      </div>
-      <div class="progress-track">
-        <div class="progress-fill" id="progress-fill" style="width:0%"></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <div>
-          <div class="metric-label">Índice de Masa Corporal</div>
-          <div class="metric-val" id="m-bmi" style="font-size:28px">—</div>
-        </div>
-        <span class="badge" id="m-bmi-label">—</span>
-      </div>
-      <div style="margin-top:12px;font-size:12px;color:#64748b">
-        IMC saludable: 18.5–24.9 · A 85 kg tu IMC sería <span style="color:#4ade80">28.7</span> (Sobrepeso leve)
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="chart-label">Evolución del peso</div>
-      <svg id="chart" width="100%" viewBox="0 0 420 170" style="overflow:visible">
-        <defs>
-          <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#6366f1" stop-opacity="0.3"/>
-            <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
-
-    <div class="card">
-      <div class="section-title">Últimos registros</div>
-      <div id="history-list"></div>
-    </div>
+    <div id="dashboard-content"><div class="loading-overlay">Cargando datos...</div></div>
   </div>
 
   <!-- LOG -->
@@ -177,7 +120,7 @@
       <input type="date" id="log-date">
       <label>Peso (kg)</label>
       <input type="number" id="log-weight" step="0.05" placeholder="ej: 92.3">
-      <button class="btn-primary" onclick="addEntry()">Guardar registro</button>
+      <button class="btn-primary" id="save-btn" onclick="addEntry()">Guardar registro</button>
       <div class="hint">💡 Pésate cada mañana, en ayunas y sin ropa</div>
     </div>
   </div>
@@ -193,11 +136,7 @@
     <div class="card" style="margin-top:8px">
       <div style="font-size:13px;font-weight:600;margin-bottom:10px">⚠️ Evitar o minimizar</div>
       <div style="font-size:13px;color:#f87171;padding-left:8px;line-height:2">
-        ✕ Ultraprocesados y bollería<br>
-        ✕ Refrescos y zumos azucarados<br>
-        ✕ Alcohol<br>
-        ✕ Salsas industriales<br>
-        ✕ Frituras frecuentes
+        ✕ Ultraprocesados y bollería<br>✕ Refrescos y zumos azucarados<br>✕ Alcohol<br>✕ Salsas industriales<br>✕ Frituras frecuentes
       </div>
     </div>
   </div>
@@ -214,10 +153,7 @@
     <div class="card card-green" style="margin-top:8px">
       <div style="font-size:13px;font-weight:600;color:#4ade80;margin-bottom:8px">💡 Consejos clave</div>
       <div style="font-size:13px;color:#94a3b8;line-height:2">
-        → Bebe 2–3 litros de agua al día<br>
-        → Duerme 7–8 horas (recuperación esencial)<br>
-        → Aumenta peso/intensidad cada 2–3 semanas<br>
-        → No saltarse el descanso del domingo
+        → Bebe 2–3 litros de agua al día<br>→ Duerme 7–8 horas (recuperación esencial)<br>→ Aumenta peso/intensidad cada 2–3 semanas<br>→ No saltarse el descanso del domingo
       </div>
     </div>
   </div>
@@ -225,7 +161,23 @@
   <div class="footer">Inicio: 94,1 kg · Meta: 85 kg · Altura: 1,72 m</div>
 </div>
 
-<script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, doc, setDoc, getDocs, deleteDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBUKX2GiIXXjpHCu0RbYQIYTurBg0c3kHE",
+  authDomain: "tracker-de-peso.firebaseapp.com",
+  projectId: "tracker-de-peso",
+  storageBucket: "tracker-de-peso.firebasestorage.app",
+  messagingSenderId: "1027197626738",
+  appId: "1:1027197626738:web:70d5fc4a206c9f6fa255eb"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const COLLECTION = "peso";
+
 const START_WEIGHT = 94.1;
 const GOAL_WEIGHT = 85;
 const HEIGHT = 1.72;
@@ -236,6 +188,7 @@ const INITIAL_ENTRIES = [
   { date: "2026-03-12", weight: 93.2 },
   { date: "2026-03-13", weight: 93.1 },
   { date: "2026-03-14", weight: 92.9 },
+  { date: "2026-03-15", weight: 93.0 },
   { date: "2026-03-16", weight: 93.35 },
   { date: "2026-03-17", weight: 93.0 },
   { date: "2026-03-18", weight: 93.0 },
@@ -261,140 +214,149 @@ const EXERCISE = [
   { day: "Dom", type: "Descanso", detail: "Descanso activo: paseo suave o yoga", duration: "30 min", icon: "😴", color: "#64748b", bg: "rgba(100,116,139,0.2)" },
 ];
 
-function loadEntries() {
-  const saved = localStorage.getItem("tracker_peso_jordi_2026");
-  if (saved) return JSON.parse(saved);
-  localStorage.setItem("tracker_peso_jordi_2026", JSON.stringify(INITIAL_ENTRIES));
-  return INITIAL_ENTRIES;
-}
-
-function saveEntries(entries) {
-  localStorage.setItem("tracker_peso_jordi_2026", JSON.stringify(entries));
-}
-
 function bmi(w) { return (w / (HEIGHT * HEIGHT)).toFixed(1); }
 function bmiLabel(b) { return b < 18.5 ? "Bajo peso" : b < 25 ? "Saludable" : b < 30 ? "Sobrepeso" : "Obesidad I"; }
 function bmiColor(b) { return b < 25 ? "#4ade80" : b < 30 ? "#facc15" : "#f87171"; }
 
-function today() {
-  return new Date().toISOString().split("T")[0];
+function setStatus(msg, type) {
+  const el = document.getElementById("sync-status");
+  el.textContent = msg;
+  el.className = "sync-status sync-" + type;
 }
 
-function renderDashboard() {
-  const entries = loadEntries().sort((a,b) => a.date.localeCompare(b.date));
+async function loadEntries() {
+  const snap = await getDocs(collection(db, COLLECTION));
+  return snap.docs.map(d => d.data()).sort((a, b) => a.date.localeCompare(b.date));
+}
+
+async function seedIfEmpty() {
+  const entries = await loadEntries();
+  if (entries.length === 0) {
+    for (const e of INITIAL_ENTRIES) {
+      await setDoc(doc(db, COLLECTION, e.date), e);
+    }
+    return await loadEntries();
+  }
+  return entries;
+}
+
+function renderDashboard(entries) {
   const latest = entries[entries.length - 1];
   const lost = (START_WEIGHT - latest.weight).toFixed(1);
   const toGo = (latest.weight - GOAL_WEIGHT).toFixed(1);
   const pct = Math.min(100, Math.max(0, ((START_WEIGHT - latest.weight) / (START_WEIGHT - GOAL_WEIGHT)) * 100));
   const b = parseFloat(bmi(latest.weight));
 
-  document.getElementById("m-current").textContent = latest.weight + " kg";
-  document.getElementById("m-lost").textContent = (lost >= 0 ? "-" : "+") + Math.abs(lost) + " kg";
-  document.getElementById("m-lost").style.color = lost >= 0 ? "#4ade80" : "#f87171";
-  document.getElementById("m-togo").textContent = toGo > 0 ? toGo + " kg" : "✓";
-  document.getElementById("m-togo").style.color = toGo > 0 ? "#facc15" : "#4ade80";
-  document.getElementById("m-pct").textContent = pct.toFixed(1) + "% completado";
-  document.getElementById("progress-fill").style.width = pct + "%";
-  document.getElementById("m-bmi").textContent = bmi(latest.weight);
-  document.getElementById("m-bmi").style.color = bmiColor(b);
-  const bmiLabelEl = document.getElementById("m-bmi-label");
-  bmiLabelEl.textContent = bmiLabel(b);
-  bmiLabelEl.style.background = bmiColor(b) + "22";
-  bmiLabelEl.style.color = bmiColor(b);
-  bmiLabelEl.style.border = "1px solid " + bmiColor(b) + "44";
+  const chartSvg = buildChart(entries);
+  const historyHtml = buildHistory(entries);
 
-  renderChart(entries);
-  renderHistory(entries);
+  document.getElementById("dashboard-content").innerHTML = `
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-val" style="color:#a5b4fc">${latest.weight} kg</div>
+        <div class="metric-label">Peso actual</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val" style="color:${parseFloat(lost) >= 0 ? '#4ade80' : '#f87171'}">${parseFloat(lost) >= 0 ? '-' : '+'}${Math.abs(lost)} kg</div>
+        <div class="metric-label">Perdido</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val" style="color:${parseFloat(toGo) > 0 ? '#facc15' : '#4ade80'}">${parseFloat(toGo) > 0 ? toGo + ' kg' : '✓'}</div>
+        <div class="metric-label">Para meta</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="progress-labels">
+        <span>Inicio: ${START_WEIGHT} kg</span>
+        <span style="color:#a5b4fc;font-weight:600">${pct.toFixed(1)}% completado</span>
+        <span>Meta: ${GOAL_WEIGHT} kg</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div class="metric-label">Índice de Masa Corporal</div>
+          <div class="metric-val" style="font-size:28px;color:${bmiColor(b)}">${bmi(latest.weight)}</div>
+        </div>
+        <span class="badge" style="background:${bmiColor(b)}22;color:${bmiColor(b)};border:1px solid ${bmiColor(b)}44">${bmiLabel(b)}</span>
+      </div>
+      <div style="margin-top:12px;font-size:12px;color:#64748b">
+        IMC saludable: 18.5–24.9 · A 85 kg tu IMC sería <span style="color:#4ade80">28.7</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-title">Evolución del peso</div>
+      ${chartSvg}
+    </div>
+    <div class="card">
+      <div class="section-title">Últimos registros</div>
+      ${historyHtml}
+    </div>
+  `;
 }
 
-function renderChart(entries) {
-  const svg = document.getElementById("chart");
+function buildChart(entries) {
   const pad = { t: 10, r: 20, b: 30, l: 38 };
   const W = 420, H = 170;
   const iW = W - pad.l - pad.r;
   const iH = H - pad.t - pad.b;
-
   const weights = entries.map(e => e.weight);
   const minW = Math.min(...weights, GOAL_WEIGHT) - 1;
   const maxW = Math.max(...weights) + 1;
-
   const toX = i => pad.l + (i / Math.max(entries.length - 1, 1)) * iW;
   const toY = w => pad.t + ((maxW - w) / (maxW - minW)) * iH;
-
   const goalY = toY(GOAL_WEIGHT);
   const pts = entries.map((e, i) => `${toX(i)},${toY(e.weight)}`).join(" ");
 
-  let html = "";
-
-  // Grid
+  let html = `<defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6366f1" stop-opacity="0.3"/><stop offset="100%" stop-color="#6366f1" stop-opacity="0"/></linearGradient></defs>`;
   [0, 0.25, 0.5, 0.75, 1].forEach(f => {
     const y = pad.t + f * iH;
     const w = maxW - f * (maxW - minW);
     html += `<line x1="${pad.l}" y1="${y}" x2="${W - pad.r}" y2="${y}" stroke="#1e293b" stroke-width="1"/>`;
     html += `<text x="${pad.l - 4}" y="${y + 3}" fill="#475569" font-size="8" text-anchor="end">${w.toFixed(0)}</text>`;
   });
-
-  // Goal line
   html += `<line x1="${pad.l}" y1="${goalY}" x2="${W - pad.r}" y2="${goalY}" stroke="#4ade80" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>`;
   html += `<text x="${W - pad.r + 4}" y="${goalY + 4}" fill="#4ade80" font-size="9" opacity="0.7">meta</text>`;
-
-  // Area
-  html += `<polygon points="${pad.l},${pad.t + iH} ${pts} ${W - pad.r},${pad.t + iH}" fill="url(#areaGrad)"/>`;
-
-  // Line
+  html += `<polygon points="${pad.l},${pad.t + iH} ${pts} ${W - pad.r},${pad.t + iH}" fill="url(#ag)"/>`;
   html += `<polyline points="${pts}" fill="none" stroke="#6366f1" stroke-width="2.5" stroke-linejoin="round"/>`;
-
-  // Points
   entries.forEach((e, i) => {
     html += `<circle cx="${toX(i)}" cy="${toY(e.weight)}" r="4" fill="#6366f1" stroke="#1e293b" stroke-width="2"/>`;
   });
-
-  // Date labels (first and last)
   [0, entries.length - 1].forEach(i => {
     html += `<text x="${toX(i)}" y="${H - 2}" fill="#475569" font-size="8" text-anchor="middle">${entries[i].date.slice(5)}</text>`;
   });
-
-  svg.innerHTML = `<defs><linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6366f1" stop-opacity="0.3"/><stop offset="100%" stop-color="#6366f1" stop-opacity="0"/></linearGradient></defs>` + html;
+  return `<svg width="100%" viewBox="0 0 ${W} ${H}" style="overflow:visible">${html}</svg>`;
 }
 
-function renderHistory(entries) {
-  const sorted = [...entries].sort((a,b) => b.date.localeCompare(a.date)).slice(0, 10);
-  const allSorted = [...entries].sort((a,b) => a.date.localeCompare(b.date));
-  let html = "";
-  sorted.forEach(e => {
+function buildHistory(entries) {
+  const sorted = [...entries].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 10);
+  const allSorted = [...entries].sort((a, b) => a.date.localeCompare(b.date));
+  return sorted.map(e => {
     const idx = allSorted.findIndex(s => s.date === e.date);
     const prev = idx > 0 ? allSorted[idx - 1] : null;
     const diff = prev ? (e.weight - prev.weight).toFixed(2) : null;
-    let diffHtml = diff !== null
-      ? `<span class="history-diff" style="color:${parseFloat(diff) <= 0 ? '#4ade80' : '#f87171'}">${parseFloat(diff) <= 0 ? "▼" : "▲"} ${Math.abs(diff)} kg</span>`
+    const diffHtml = diff !== null
+      ? `<span style="font-size:12px;color:${parseFloat(diff) <= 0 ? '#4ade80' : '#f87171'}">${parseFloat(diff) <= 0 ? '▼' : '▲'} ${Math.abs(diff)} kg</span>`
       : `<span style="font-size:11px;color:#4f46e5">inicio</span>`;
-    html += `<div class="history-row">
-      <span class="history-date">${e.date}</span>
-      <span class="history-weight">${e.weight} kg</span>
-      ${diffHtml}
-    </div>`;
-  });
-  document.getElementById("history-list").innerHTML = html;
+    return `<div class="history-row"><span class="history-date">${e.date}</span><span class="history-weight">${e.weight} kg</span>${diffHtml}</div>`;
+  }).join("");
 }
 
 function renderMeals() {
-  let html = "";
-  MEALS.forEach(m => {
-    html += `<div class="meal-card">
+  document.getElementById("meal-list").innerHTML = MEALS.map(m => `
+    <div class="meal-card">
       <div class="meal-header">
         <span class="meal-name">${m.meal}</span>
         <span class="badge" style="background:rgba(99,102,241,0.2);color:#a5b4fc">~${m.kcal} kcal</span>
       </div>
       ${m.foods.map(f => `<div class="meal-food">· ${f}</div>`).join("")}
-    </div>`;
-  });
-  document.getElementById("meal-list").innerHTML = html;
+    </div>`).join("");
 }
 
 function renderExercise() {
-  let html = "";
-  EXERCISE.forEach(ex => {
-    html += `<div class="ex-card">
+  document.getElementById("exercise-list").innerHTML = EXERCISE.map(ex => `
+    <div class="ex-card">
       <div class="ex-icon">${ex.icon}</div>
       <div class="ex-info">
         <div class="ex-day-row">
@@ -404,40 +366,56 @@ function renderExercise() {
         <div class="ex-detail">${ex.detail}</div>
       </div>
       <div class="ex-duration">${ex.duration}</div>
-    </div>`;
-  });
-  document.getElementById("exercise-list").innerHTML = html;
+    </div>`).join("");
 }
 
-function addEntry() {
+window.switchTab = function(id, event) {
+  document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
+  document.querySelectorAll(".tab-btn").forEach(el => el.classList.remove("active"));
+  document.getElementById("tab-" + id).classList.add("active");
+  if (event && event.target) event.target.classList.add("active");
+};
+
+window.addEntry = async function() {
   const dateEl = document.getElementById("log-date");
   const weightEl = document.getElementById("log-weight");
+  const btn = document.getElementById("save-btn");
   const w = parseFloat(weightEl.value);
   if (!dateEl.value || isNaN(w) || w < 40 || w > 200) {
     alert("Introduce una fecha y un peso válido.");
     return;
   }
-  let entries = loadEntries();
-  entries = entries.filter(e => e.date !== dateEl.value);
-  entries.push({ date: dateEl.value, weight: w });
-  saveEntries(entries);
-  weightEl.value = "";
-  renderDashboard();
-  switchTab("dashboard");
-}
-
-function switchTab(id) {
-  document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
-  document.querySelectorAll(".tab-btn").forEach(el => el.classList.remove("active"));
-  document.getElementById("tab-" + id).classList.add("active");
-  event.target.classList.add("active");
-}
+  btn.disabled = true;
+  btn.textContent = "Guardando...";
+  try {
+    await setDoc(doc(db, COLLECTION, dateEl.value), { date: dateEl.value, weight: w });
+    weightEl.value = "";
+    setStatus("✅ Guardado en la nube", "ok");
+    const entries = await loadEntries();
+    renderDashboard(entries);
+    switchTab("dashboard", null);
+    document.querySelectorAll(".tab-btn")[0].classList.add("active");
+  } catch(e) {
+    setStatus("❌ Error al guardar", "error");
+  }
+  btn.disabled = false;
+  btn.textContent = "Guardar registro";
+};
 
 // Init
-document.getElementById("log-date").value = today();
-renderDashboard();
+document.getElementById("log-date").value = new Date().toISOString().split("T")[0];
 renderMeals();
 renderExercise();
+
+try {
+  setStatus("⏳ Conectando...", "loading");
+  const entries = await seedIfEmpty();
+  renderDashboard(entries);
+  setStatus("☁️ Sincronizado", "ok");
+} catch(e) {
+  setStatus("❌ Sin conexión", "error");
+  document.getElementById("dashboard-content").innerHTML = `<div class="loading-overlay">Error al conectar con la base de datos. Comprueba tu conexión.</div>`;
+}
 </script>
 </body>
 </html>
